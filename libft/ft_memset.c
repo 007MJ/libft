@@ -6,19 +6,23 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:05:06 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/10/18 16:22:12 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/10/21 13:44:09 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *s, int c, size_t n)
+void	*memset(void *b, int c, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*cb;
+	unsigned char	cc;
 
 	i = 0;
-	while (s[i] && i < n)
+	cb = (unsigned char *)b;
+	cc = (unsigned int *)c;
+	while (i < n)
 	{
-		s[i] = c;
+		cb[i] = c;
 		i++;
 	}
-	return (s);
+	return (b);
 }

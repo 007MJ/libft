@@ -6,19 +6,20 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:18:22 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/10/18 16:36:31 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/10/21 13:34:20 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	unsigned char	*c;
+	size_t			i;
 
 	i = 0;
-	while (s[i])
+	c = (unsigned char *)s;
+	while (i < n)
 	{
-		s[i] = 0;
+		c[i] = 0;
 		i++;
 	}
-	return (s);
 }
