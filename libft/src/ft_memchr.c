@@ -6,13 +6,11 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:11:07 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/10/24 14:50:35 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/10/28 15:49:58 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-//#include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -21,9 +19,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	cs = (unsigned char *)s;
 	i = 0;
-	while (i <= n && n != 0)
+	while (i < n && n != 0)
 	{
-		if (cs[i] == c)
+		if (cs[i] == (unsigned char)c)
 		{
 			return (cs + i);
 		}
@@ -31,16 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-/*
-int main ()
-{
-    char str[] = "http://www.tutorialspoint.com";
-    char ch = '.';
-   char *ret;
-
-   ret = ft_memchr(str, ch, ft_strlen(str));
-
-   printf("String after |%c| is - |%s|\n", ch, ret);
-
-   return(0);
-}*/
