@@ -6,23 +6,25 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 20:28:32 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/10/21 14:45:28 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:53:02 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcpy(char *dst, const char *src, size_t dstsize)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
 	i = 0;
-	while (dstsize != 0 && i != dstsize)
+	if (dstsize > 0)
 	{
-		dest[i] = src[i];
-		i++;
+		while (src[i] && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
-	while (i < dst)
-	{
-		dest[i] = '\0';
-	}
-	return (i);
+	return (ft_strlen(src));
 }

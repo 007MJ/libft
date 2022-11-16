@@ -6,19 +6,26 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:11:07 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/10/19 14:03:36 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/10/28 15:49:58 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	while (n != )
+	size_t			i;
+	unsigned char	*cs;
+
+	cs = (unsigned char *)s;
+	i = 0;
+	while (i < n && n != 0)
 	{
-		if (s[n] == c)
+		if (cs[i] == (unsigned char)c)
 		{
-			return (s);
+			return (cs + i);
 		}
-		n--;
+		i++;
 	}
 	return (0);
 }

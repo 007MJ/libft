@@ -6,13 +6,15 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 13:20:22 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/10/20 09:12:31 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/10/24 16:39:07 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isprint(int c)
+#include "libft.h"
+
+int	ft_isprint(int c)
 {
-	if (c > 32 && c >= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}
