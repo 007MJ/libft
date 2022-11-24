@@ -6,7 +6,7 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 13:38:28 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/11/07 15:09:36 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/11/24 09:37:31 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	*ptr;
 
-	if (count == 0 || size == 0)
+	if (count == 0 && size == 0)
 	{
 		count = 1;
 		size = 1;

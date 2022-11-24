@@ -6,7 +6,7 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:34:07 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/11/10 10:52:10 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/11/24 09:39:01 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ char	**ft_split(const char *s, char c)
 
 	split = malloc (sizeof(char *) * (nbrworld(s, c) + 1));
 	if (!split)
-		return (0);
+		return (NULL);
 	return (yig(split, s, c));
 }
