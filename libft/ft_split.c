@@ -6,7 +6,7 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:34:07 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/11/24 09:39:01 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/11/25 08:52:37 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static char	**yig(char **yp, char const *s, char c)
 		while (s[i] != c && s[i])
 			i++;
 		yp[len] = ft_substr(s, star, i - star);
-		if (!yp)
+		if (!yp[len])
 			return (ft_free(yp));
 		len++;
 	}
