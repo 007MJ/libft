@@ -6,7 +6,7 @@
 /*   By: mnshimiy <mnshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:34:07 by mnshimiy          #+#    #+#             */
-/*   Updated: 2022/11/25 08:52:37 by mnshimiy         ###   ########.fr       */
+/*   Updated: 2022/11/26 15:47:24 by mnshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	nbrworld(char const *str, char c)
 	return (word);
 }
 
-static char	**yig(char **yp, char const *s, char c)
+static char	**mysplit(char **section, char const *s, char c)
 {
 	int	i;
 	int	star;
@@ -61,13 +61,13 @@ static char	**yig(char **yp, char const *s, char c)
 		star = i;
 		while (s[i] != c && s[i])
 			i++;
-		yp[len] = ft_substr(s, star, i - star);
-		if (!yp[len])
-			return (ft_free(yp));
+		section[len] = ft_substr(s, star, i - star);
+		if (!section[len])
+			return (ft_free(section));
 		len++;
 	}
-	yp[len] = 0;
-	return (yp);
+	section[len] = 0;
+	return (section);
 }
 
 char	**ft_split(const char *s, char c)
@@ -77,5 +77,5 @@ char	**ft_split(const char *s, char c)
 	split = malloc (sizeof(char *) * (nbrworld(s, c) + 1));
 	if (!split)
 		return (NULL);
-	return (yig(split, s, c));
+	return (mysplit(split, s, c));
 }
